@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500&display=swap");
+@mixin py($padding) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+@mixin body() {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+@mixin bg-position($top, $left) {
+  pointer-events: none;
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: -1;
+}
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-between() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin container {
+  max-width: 1440-200px;
+  margin: 0 auto;
+}
+@mixin center-container-col() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin btn($px, $bg, $color) {
+  padding-right: $px;
+  padding-left: $px;
+  background-color: $bg;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $color;
+  cursor: pointer;
+}
+$color: #6200ee;
+$text-white: white;
+body {
+  font-family: Mulish;
+  font-size: 18px;
+}
+//todo 404
+.bg_position {
+  @include bg-position(0, 0);
+}
+.container_404 {
+  @include center-container-col();
+  @include body();
+  gap: 72px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  .btn_common {
+    @include btn(64px, $color, $text-white);
+    border: none;
+  }
+  .btn_transition {
+    @include btn(72.5px, $text-white, $color);
+    border: 1px solid $color;
+  }
+}
+//todo 404
+
+//todo home
+.home_page {
+  @include body();
+  position: relative;
+}
+.container {
+  @include container();
+}
+nav {
+  @include flex-between();
+  @include py(12px);
+}
+.logo-search {
+  @include flex-center();
+  gap: 24px;
+}
+.logo {
+  @include flex-center();
+  color: $text-white;
+  font-weight: 700;
+  gap: 20px;
+  span {
+    span {
+      color: $color;
+    }
+  }
+}
+//todo home

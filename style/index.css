@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Mulish;
+  font-size: 18px;
+}
+
+.bg_position {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container_404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  gap: 72px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.btns .btn_common {
+  padding-right: 64px;
+  padding-left: 64px;
+  background-color: #6200ee;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.btns .btn_transition {
+  padding-right: 72.5px;
+  padding-left: 72.5px;
+  background-color: white;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #6200ee;
+  cursor: pointer;
+  border: 1px solid #6200ee;
+}
+
+.home_page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo-search {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  gap: 20px;
+}
+.logo span span {
+  color: #6200ee;
+}/*# sourceMappingURL=index.css.map */
