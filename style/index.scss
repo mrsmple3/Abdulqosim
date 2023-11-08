@@ -84,6 +84,9 @@ body {
 .home_page {
   @include body();
   position: relative;
+  nav {
+    margin-bottom: 36px;
+  }
 }
 .container {
   @include container();
@@ -102,6 +105,51 @@ nav {
   font-weight: 700;
   gap: 20px;
   span {
+    span {
+      color: $color;
+    }
+  }
+}
+.search {
+  width: 300px;
+  height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  img {
+    padding-right: 12px;
+  }
+  input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    color: #ffff;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 4px;
+    }
+  }
+}
+.avata-bell {
+  @include flex-center();
+  gap: 24px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 36px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  color: $text-white;
+  h1 {
     span {
       color: $color;
     }
